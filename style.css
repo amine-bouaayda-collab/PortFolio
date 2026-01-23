@@ -1,0 +1,55 @@
+canvas#binary-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000;
+}
+
+body {
+    background-color: transparent !important;
+    color: #e0e0e0;
+}
+
+/* Override various white/light backgrounds */
+.bg-white,
+.bg-gray-50,
+.bg-gray-900,
+nav[class*="bg-white"],
+[class*="bg-white/"] {
+    background-color: rgba(17, 24, 39, 0.85) !important;
+    color: #fff !important;
+}
+
+.text-gray-800,
+.text-gray-700,
+.text-gray-600 {
+    color: #cbd5e1 !important;
+}
+
+/* Gradient bg override for hero */
+.gradient-bg {
+    background: transparent !important;
+}
+
+/* Adjust card backgrounds */
+.skill-card,
+.project-card {
+    background-color: rgba(30, 41, 59, 0.9) !important;
+    border: 1px solid rgba(75, 85, 99, 0.4);
+}
+
+.shadow-lg,
+.shadow-xl {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Ensure input fields are readable in dark mode */
+input,
+textarea {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}

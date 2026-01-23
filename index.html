@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amine BOUAAYDA| Senior Frontend Developer</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary: #3bf648;
+            --secondary: #1eaf51;
+            --dark: #1f2937;
+            --light: #f9fafb;
+        }
+        
+        * {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #30af25 0%, #45de37 100%);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid var(--primary);
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--primary); }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <canvas id="binary-canvas"></canvas>
+   
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-blue-600">A.B</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About</a>
+                    <a href="#skills" class="text-gray-700 hover:text-blue-600 font-medium">Skills</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 font-medium">Projects</a>
+                    <a href="#experience" class="text-gray-700 hover:text-blue-600 font-medium">Experience</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                </div>
+                <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition">Hire Me</a>
+            </div>
+        </div>
+    </nav>
+
+ 
+    <section id="home" class="pt-24 pb-20 md:pt-32 md:pb-28 gradient-bg text-white">
+        <div class="container mx-auto px-6 backdrop-blur-sm">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h4 class="text-lg mb-2 opacity-90">Hello, I'm</h4>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-4">Amine BOUAAYDA</h1>
+                    <h2 class="text-3xl md:text-4xl font-semibold mb-6 typewriter">Junior Frontend Developer</h2>
+                    <p class="text-xl mb-8 opacity-90">I craft exceptional digital experiences with clean, efficient code and pixel-perfect designs. i'm building web applications with React, TypeScript, and modern frameworks.</p>
+                    <div class="flex space-x-4">
+                        <a href="#projects" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition">View Projects</a>
+                        <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white/10 transition">Contact Me</a>
+                    </div>
+                </div>
+                <div class="md:w-2/5" data-aos="fade-left">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-blue-400 rounded-full mx-auto overflow-hidden border-8 border-white shadow-2xl">
+                            
+                            <div class="w-full h-full  bg-green-700 flex items-center justify-center">
+                                <i class="fas fa-code text-white text-8xl"></i>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 bg-white text-blue-600 p-4 rounded-xl shadow-xl">
+                            <div class="text-2xl font-bold">1+</div>
+                            <div class="text-sm">Year Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">Technical Expertise</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up">Mastering the complete frontend stack with focus on performance, accessibility, and user experience.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               
+                <div class="skill-card bg-gray-50 p-8 rounded-xl border border-gray-200" data-aos="fade-up">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">HTML5 & Semantic Web</h3>
+                    <p class="text-gray-600 mb-4">Building accessible, SEO-optimized structures with proper semantics, ARIA labels, and microdata.</p>
+                    <div class="mt-4">
+                        <div class="flex justify-between mb-1">
+                            <span>Expert Level</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="skill-card bg-gray-50 p-8 rounded-xl border border-gray-200" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">CSS3 & Tailwind</h3>
+                    <p class="text-gray-600 mb-4">Advanced CSS animations, responsive designs, and utility-first frameworks like Tailwind CSS.</p>
+                    <div class="mt-4">
+                        <div class="flex justify-between mb-1">
+                            <span>Expert Level</span>
+                            <span>98%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 98%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="skill-card bg-gray-50 p-8 rounded-xl border border-gray-200" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">JavaScript & TypeScript</h3>
+                    <p class="text-gray-600 mb-4">Modern ES6+, TypeScript for type safety, design patterns, and performance optimization.</p>
+                    <div class="mt-4">
+                        <div class="flex justify-between mb-1">
+                            <span>Expert Level</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="skill-card bg-gray-50 p-8 rounded-xl border border-gray-200" data-aos="fade-up">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">React Ecosystem</h3>
+                    <p class="text-gray-600 mb-4">React Hooks, Context API, Redux, Next.js, Gatsby, and React Native for mobile.</p>
+                    <div class="mt-4">
+                        <div class="flex justify-between mb-1">
+                            <span>Advanced</span>
+                            <span>96%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 96%"></div>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="skill-card bg-gray-50 p-8 rounded-xl border border-gray-200" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">UI/UX Design</h3>
+                    <p class="text-gray-600 mb-4">Figma, Adobe XD, user research, wireframing, prototyping, and design systems.</p>
+                    <div class="mt-4">
+                        <div class="flex justify-between mb-1">
+                            <span>Advanced</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 92%"></div>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="skill-card bg-gray-50 p-8 rounded-xl border border-gray-200" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dev Tools & Testing</h3>
+                    <p class="text-gray-600 mb-4">Webpack, Vite, Jest, Cypress, Git, Docker, and CI/CD pipeline setup.</p>
+                    <div class="mt-4">
+                        <div class="flex justify-between mb-1">
+                            <span>Advanced</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">Featured Projects</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up">Real-world applications showcasing modern frontend development practices.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-purple-600 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-shopping-cart text-white text-6xl"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white text-sm px-3 py-1 rounded-full">React + TypeScript</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-Commerce Dashboard</h3>
+                        <p class="text-gray-600 mb-4">Full-featured e-commerce platform with real-time analytics, cart management, and payment integration.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded">React</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded">TypeScript</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded">Tailwind</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded">Redux</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-600 font-medium hover:text-blue-800">
+                                <i class="fab fa-github mr-2"></i>View Code
+                            </a>
+                            <a href="#" class="text-gray-700 font-medium hover:text-blue-600">
+                                Live Demo <i class="fas fa-external-link-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-teal-600 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-chart-line text-white text-6xl"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-green-600 text-white text-sm px-3 py-1 rounded-full">Next.js + D3.js</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Analytics Dashboard</h3>
+                        <p class="text-gray-600 mb-4">Interactive data visualization platform with custom charts, filters, and real-time updates.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded">Next.js</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded">D3.js</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded">Chart.js</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded">SSR</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-600 font-medium hover:text-blue-800">
+                                <i class="fab fa-github mr-2"></i>View Code
+                            </a>
+                            <a href="#" class="text-gray-700 font-medium hover:text-blue-600">
+                                Live Demo <i class="fas fa-external-link-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-600 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-video text-white text-6xl"></i>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-purple-600 text-white text-sm px-3 py-1 rounded-full">WebRTC + Socket.io</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Video Conferencing App</h3>
+                        <p class="text-gray-600 mb-4">Real-time video communication platform with screen sharing, chat, and recording features.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded">React</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded">WebRTC</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded">Socket.io</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded">Node.js</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="#" class="text-blue-600 font-medium hover:text-blue-800">
+                                <i class="fab fa-github mr-2"></i>View Code
+                            </a>
+                            <a href="#" class="text-gray-700 font-medium hover:text-blue-600">
+                                Live Demo <i class="fas fa-external-link-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="experience" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">Work Experience</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up">Professional journey contributing to successful products and teams.</p>
+            
+            <div class="max-w-3xl mx-auto">
+                
+                <div class="mb-12" data-aos="fade-up">
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 text-blue-800 p-4 rounded-lg mr-6">
+                            <i class="fas fa-briefcase text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold">Senior Frontend Developer</h3>
+                            <div class="text-blue-600 font-medium mb-2">TechVision Inc. • 2021 - Present</div>
+                            <p class="text-gray-600 mb-3">Lead frontend development for SaaS products serving 50K+ users. Implemented design systems, improved performance by 40%, and mentored 3 junior developers.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded">React</span>
+                                <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded">TypeScript</span>
+                                <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded">GraphQL</span>
+                                <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded">Jest</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="mb-12" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-start">
+                        <div class="bg-green-100 text-green-800 p-4 rounded-lg mr-6">
+                            <i class="fas fa-code text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold">Frontend Developer</h3>
+                            <div class="text-blue-600 font-medium mb-2">DigitalSolutions Co. • 2019 - 2021</div>
+                            <p class="text-gray-600 mb-3">Built responsive web applications for clients in finance and healthcare industries. Collaborated with UX designers to implement pixel-perfect interfaces.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded">Vue.js</span>
+                                <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded">SCSS</span>
+                                <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded">Webpack</span>
+                                <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded">REST APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="mb-12" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-start">
+                        <div class="bg-purple-100 text-purple-800 p-4 rounded-lg mr-6">
+                            <i class="fas fa-laptop-code text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold">Web Developer</h3>
+                            <div class="text-blue-600 font-medium mb-2">Creative Agency • 2018 - 2019</div>
+                            <p class="text-gray-600 mb-3">Developed websites and web applications for various clients. Focused on responsive design, cross-browser compatibility, and performance optimization.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded">JavaScript</span>
+                                <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded">HTML/CSS</span>
+                                <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded">jQuery</span>
+                                <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded">WordPress</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="contact" class="py-20 gradient-bg text-white backdrop-blur-sm">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4" data-aos="fade-up">Let's Work Together</h2>
+            <p class="text-center mb-12 max-w-2xl mx-auto opacity-90" data-aos="fade-up">Looking for a junior frontend developer? Let's discuss how I can contribute to your next project.</p>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    
+                    <div data-aos="fade-right">
+                        <h3 class="text-2xl font-bold mb-6">Get In Touch</h3>
+                        
+                        <div class="mb-8">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-white/20 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Email</div>
+                                    <div class="opacity-90">aminebouaayda3@gmail.com</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center mb-4">
+                                <div class="bg-white/20 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Phone</div>
+                                    <div class="opacity-90">0628850462</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="bg-white/20 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Location</div>
+                                    <div class="opacity-90">Rabat, Morocco</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <h4 class="text-xl font-bold mb-4">Connect With Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-white/20 p-3 rounded-lg hover:bg-white/30 transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="bg-white/20 p-3 rounded-lg hover:bg-white/30 transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="bg-white/20 p-3 rounded-lg hover:bg-white/30 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-white/20 p-3 rounded-lg hover:bg-white/30 transition">
+                                    <i class="fab fa-codepen"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                  
+                    <div data-aos="fade-left">
+                        <form class="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
+                            <div class="mb-6">
+                                <label class="block mb-2 font-medium">Name</label>
+                                <input type="text" class="w-full p-3 bg-white/20 rounded-lg border border-white/30 focus:outline-none focus:border-white">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block mb-2 font-medium">Email</label>
+                                <input type="email" class="w-full p-3 bg-white/20 rounded-lg border border-white/30 focus:outline-none focus:border-white">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block mb-2 font-medium">Message</label>
+                                <textarea rows="4" class="w-full p-3 bg-white/20 rounded-lg border border-white/30 focus:outline-none focus:border-white"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-white text-blue-600 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
+                                Send Message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="text-2xl font-bold mb-2">Amine BOUAAYDA</div>
+                    <div class="text-gray-400">junior Frontend Developer & UI/UX Specialist</div>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#home" class="text-gray-400 hover:text-white">Home</a>
+                    <a href="#about" class="text-gray-400 hover:text-white">About</a>
+                    <a href="#projects" class="text-gray-400 hover:text-white">Projects</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Amine BOUAAYDA. All rights reserved.</p>
+                <p class="mt-2">Built with <i class="fas fa-heart text-red-500"></i> using HTML, CSS, JavaScript & Tailwind CSS</p>
+            </div>
+        </div>
+    </footer>
+
+   
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   
+    <script src="script.js"></script>
+    <script>
+        // Initialize AOS (Animate on Scroll)
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add active class to nav links on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-blue-600');
+                if(link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-blue-600');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
